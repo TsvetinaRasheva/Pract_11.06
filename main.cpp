@@ -5,7 +5,7 @@
 
 int main() {
 	
-	Timestamp obj = Timestamp();
+	/*Timestamp obj = Timestamp();
 	std::cin >> obj;
 	std::cout << obj;
 	std::cout << std::endl;
@@ -27,19 +27,26 @@ int main() {
 	std::cin >> timeD;
 	std::cout << timeD;
 	std::cout << std::endl;
-	
+	*/
 
-	/*PriceTag<int> prT = PriceTag<int>(200);
-	PriceTag<int> prT1 = PriceTag<int>(12.25);
-	PriceTag<int> prT2 = PriceTag<int>(11);*/
+	PriceTag<int> prT = PriceTag<int>(200);
+	PriceTag<int> prT1 = PriceTag<int>(12);
+	PriceTag<int> prT2 = PriceTag<int>(11);
+	PriceTag<int> prT3 = PriceTag<int>();
+
+	std::cin >> prT3;
+	std::cout << std::endl;
+	prT3.discount();
+	std::cout << prT3;
+	std::cout << std::endl;
 
 
-//	PriceCatalog<PriceTag<int>> catalog = PriceCatalog<PriceTag<int>>();
-	//catalog += prT;
-	//catalog += prT1;
-	//catalog += prT2;
+	PriceCatalog<PriceTag<int>> catalog = PriceCatalog<PriceTag<int>>();
+	catalog += prT;
+	catalog += prT1;
+	catalog += prT2;
+	std::cout << catalog;
 
-	//std::cout << catalog;
 
 	return 0;
 }
